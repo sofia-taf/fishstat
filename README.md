@@ -28,6 +28,13 @@ library(fishstat)
 ?fishstat
 ```
 
+References
+----------
+
+FAO FishStat:
+* https://www.fao.org/fishery/en/fishstat
+* https://www.fao.org/fishery/static/Data/
+
 Development
 -----------
 
