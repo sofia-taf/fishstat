@@ -2,13 +2,17 @@ Package: fishstat
 Version: 1.0.0
 Date: 2023-06-22
 Title: Global Fishery and Aquaculture Statistics
-Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"))
+Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"),
+             person("Rishi", "Sharma", role="aut"),
+             person("Nicole", "Tursich", role="aut"),
+             person("FAO", role="cph"))
+LazyData: yes
 Description: The Food and Agriculture Organization of the United Nations (FAO)
   FishStat database is the leading source of global fishery and aquaculture
   statistics and provides unique information for sector analysis and monitoring.
   This package provides the global production data from all fisheries and
   aquaculture in R format, ready for analysis.
 License: CC BY-NC-SA 4.0
-URL: https://github.com/sofia-taf/fishstat, https://www.fao.org/fishery/en/fishstat
+URL: https://www.fao.org/fishery/en/fishstat, https://github.com/sofia-taf/fishstat
 Encoding: UTF-8
 RoxygenNote: 7.2.3
