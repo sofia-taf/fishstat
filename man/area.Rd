@@ -3,7 +3,7 @@
 \docType{data}
 \name{area}
 \alias{area}
-\title{Major Fishing Areas}
+\title{Areas}
 \format{
 Data frame containing five columns:
 \tabular{ll}{

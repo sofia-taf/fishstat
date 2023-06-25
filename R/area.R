@@ -2,7 +2,7 @@
 #'
 #' @name area
 #'
-#' @title Major Fishing Areas
+#' @title Areas
 #'
 #' @description Major inland and marine fishing areas, defined by FAO (2023).
 #'
