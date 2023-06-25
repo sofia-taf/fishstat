@@ -32,6 +32,7 @@
 #' FAO (2023).
 #' Global Capture Production.
 #' Fisheries and Aquaculture Division. Rome.
+#'
 #' \url{https://www.fao.org/fishery/en/collection/capture}
 #'
 #' @seealso

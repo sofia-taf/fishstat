@@ -11,17 +11,18 @@ Data frame containing five columns:
   \code{area_name}     \tab area name\cr
   \code{inlandmarine}  \tab string indicating whether an area is inland or marine\cr
   \code{faregion}      \tab string indicating whether a marine area is
-                            categorized as northern, central, or southern.\cr
-  \code{ocean}         \tab string indicating a marine area is categorized as
-                            a part of the Atlantic, Indian, Pacific, or
-                            Southern Ocean.
+                            northern, central, or southern\cr
+  \code{ocean}         \tab string indicating whether a marine area is a part
+                            of the Atlantic, Indian, Pacific, or Southern
+                            Ocean
 }
 }
 \source{
 FAO (2023).
-Global Capture Production.
+Global Production.
 Fisheries and Aquaculture Division. Rome.
-\url{https://www.fao.org/fishery/en/collection/capture}
+
+\url{https://www.fao.org/fishery/en/collection/global_production}
 }
 \usage{
 area
