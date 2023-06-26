@@ -14,13 +14,13 @@
 #' @format
 #' Data frame containing seven columns:
 #' \tabular{ll}{
-#'   \code{species}     \tab \code{\link{species}} code\cr
-#'   \code{year}        \tab year\cr
-#'   \code{area}        \tab \code{\link{area}} code\cr
-#'   \code{country}     \tab \code{\link{country}} code\cr
-#'   \code{value}       \tab quantity in tonnes\cr
-#'   \code{measure}     \tab \code{\link{measure}} code\cr
-#'   \code{status}      \tab \code{\link{status}} code
+#'   \code{species} \tab \code{\link{species}} code\cr
+#'   \code{year}    \tab year\cr
+#'   \code{area}    \tab \code{\link{area}} code\cr
+#'   \code{country} \tab \code{\link{country}} code\cr
+#'   \code{value}   \tab quantity in tonnes or number of individuals\cr
+#'   \code{measure} \tab \code{\link{measure}} code\cr
+#'   \code{status}  \tab \code{\link{status}} code
 #' }
 #'
 #' @details
