@@ -32,7 +32,7 @@
 #' \code{\link{aquaculture}} and \code{\link{capture}} data are also
 #' available in a combined \code{\link{production}} format.
 #'
-#' \code{\link{environment}}, \code{\link{country}}, \code{\link{environment}},
+#' \code{\link{area}}, \code{\link{country}}, \code{\link{environment}},
 #' \code{\link{measure}}, \code{\link{source}}, \code{\link{species}}, and
 #' \code{\link{status}} are lookup tables.
 #'
