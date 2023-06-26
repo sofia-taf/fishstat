@@ -59,7 +59,7 @@
 #' x <- merge(aquaculture, species[c("species", "major")])
 #' aggregate(value~tolower(major), x, function(x) round(sum(x/1e6)))
 #'
-#' # Annual aquaculture production of all aquatic animals
+#' # Annual aquaculture production of all animals
 #' x <- merge(aquaculture, species[c("species", "yearbook")])
 #' x <- aggregate(value~year, x, sum, subset=yearbook != "Aquatic plants")
 #' plot(value/1e6~year, x, ylim=c(0,105), ylab="million tonnes")
