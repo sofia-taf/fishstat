@@ -38,19 +38,20 @@ simplified to facilitate quick exploration and plotting in R.
 \examples{
 head(capture)
 
+# Analyze catches reported in tonnes
+cap.t <- merge(capture[capture$measure == "Q_tlw",], species)
+
 # Top 10 capture species in 2021
-x <- aggregate(value~species, capture, sum, subset=year==2021)
-x <- merge(x, species[c("species", "species_name")])
+x <- aggregate(value~species_name, cap.t, sum, subset=year==2021)
 x$value <- round(x$value)
 head(x[order(-x$value),], 10)
 
 # Total capture production by major group since 1950, in million tonnes
-x <- merge(capture, species[c("species", "major")])
-aggregate(value~tolower(major), x, function(x) round(sum(x/1e6)))
+x <- aggregate(value~tolower(major), cap.t, function(x) round(sum(x/1e6)))
+x[x$value > 0,]
 
 # Annual capture production of all aquatic animals
-x <- merge(capture, species[c("species", "yearbook")])
-x <- aggregate(value~year, x, sum)
+x <- aggregate(value~year, cap.t, sum)
 plot(value/1e6~year, x, ylim=c(0,105), ylab="million tonnes")
 title(main="Capture production: All")
 }
