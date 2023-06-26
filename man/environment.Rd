@@ -8,7 +8,7 @@
 Data frame containing two columns:
 \tabular{ll}{
   \code{environment}      \tab environment code\cr
-  \code{environment_name} \tab environment name\
+  \code{environment_name} \tab environment name
 }
 }
 \source{
@@ -34,7 +34,8 @@ environment
 
 # Aquaculture production by environment in 2021, in million tonnes
 x <- merge(aquaculture, environment)
-aggregate(value~environment, x, function(x) sum(x/1e6), subset=year==2021)
+x <- aggregate(value~environment_name, x, sum, subset=year==2021)
+transform(x, value=round(value/1e6))
 }
 \seealso{
 \code{\link{aquaculture}} and \code{\link{capture}} data are also
