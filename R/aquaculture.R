@@ -49,20 +49,20 @@
 #' @examples
 #' head(aquaculture)
 #'
+#' # Add species columns
+#' aqua.sp <- merge(aquaculture, species)
+#'
 #' # Top 10 aquaculture species in 2021
-#' x <- aggregate(value~species, aquaculture, sum, subset=year==2021)
-#' x <- merge(x, species[c("species", "species_name")])
+#' x <- aggregate(value~species_name, aqua.sp, sum, subset=year==2021)
 #' x$value <- round(x$value)
 #' head(x[order(-x$value),], 10)
 #'
 #' # Total aquaculture production by major group since 1950, in million tonnes
-#' x <- merge(aquaculture, species[c("species", "major")])
-#' aggregate(value~tolower(major), x, function(x) round(sum(x/1e6)))
+#' aggregate(value~tolower(major), aqua.sp, function(x) round(sum(x/1e6)))
 #'
 #' # Annual aquaculture production of all animals
-#' x <- merge(aquaculture, species[c("species", "yearbook")])
-#' x <- aggregate(value~year, x, sum, subset=yearbook != "Aquatic plants")
-#' plot(value/1e6~year, x, ylim=c(0,105), ylab="million tonnes")
+#' x <- aggregate(value~year, aqua.sp, sum, subset=yearbook != "Aquatic plants")
+#' plot(value/1e6~year, x, ylim=c(0,105), ylab="million tonnes", type="l")
 #' title(main="Aquaculture production: All animals")
 
 NA
