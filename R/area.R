@@ -12,12 +12,12 @@
 #' @format
 #' Data frame containing five columns:
 #' \tabular{ll}{
-#'   \code{area}          \tab area code\cr
-#'   \code{area_name}     \tab area name\cr
-#'   \code{inlandmarine}  \tab inland or marine\cr
-#'   \code{faregion}      \tab northern, central, or southern (for marine
+#'   \code{area}         \tab area code\cr
+#'   \code{area_name}    \tab area name\cr
+#'   \code{inlandmarine} \tab inland or marine\cr
+#'   \code{faregion}     \tab northern, central, or southern (for marine
 #'                             areas)\cr
-#'   \code{ocean}         \tab Atlantic, Indian, Pacific, or Southern Ocean (for
+#'   \code{ocean}        \tab Atlantic, Indian, Pacific, or Southern Ocean (for
 #'                             marine areas)
 #' }
 #'
