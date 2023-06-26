@@ -40,7 +40,7 @@ head(measure, 3)
 # Aquaculture production is measured in tonnes live weight
 table(aquaculture$measure)
 
-# Capture production is measured either in tonnes or number of individuals
+# Capture production is measured in tonnes or number of individuals
 table(capture$measure)
 
 # When number of individuals is used, it is for mammals and reptiles
