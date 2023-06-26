@@ -5,7 +5,7 @@
 \alias{capture}
 \title{Global Capture Production}
 \format{
-Data frame containing eight columns:
+Data frame containing seven columns:
 \tabular{ll}{
   \code{species}     \tab \code{\link{species}} code\cr
   \code{year}        \tab year\cr
