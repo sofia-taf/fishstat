@@ -38,7 +38,7 @@ simplified to facilitate quick exploration and plotting in R.
 \examples{
 head(capture)
 
-# Analyze catches reported in tonnes
+# Analyze catches measured in tonnes
 cap.t <- merge(capture[capture$measure == "Q_tlw",], species)
 
 # Top 10 capture species in 2021
