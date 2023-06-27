@@ -39,7 +39,7 @@ simplified to facilitate quick exploration and plotting in R.
 \examples{
 head(production)
 
-# Analyze catches measured in tonnes
+# Analyze production measured in tonnes
 prod.t <- production[production$measure == "Q_tlw",]
 
 # Exclude mammals, reptiles, amphibians, and plants
@@ -54,9 +54,9 @@ prod.t$w <- ifelse(prod.t$inlandmarine == "Marine areas", "marine", "inland")
 prod.t$origin <- paste0(prod.t$origin, " (", prod.t$w, ")")
 
 # World capture fisheries and aquaculture production
-library(areaplot)
 x <- xtabs(value~year+origin, aggregate(value~year+origin, prod.t, sum))
 x <- x[,c(2,1,4,3)] / 1e6
+library(areaplot)
 areaplot(x, legend=TRUE, args.legend=list(x="topleft"), ylab="million tonnes")
 }
 \seealso{
