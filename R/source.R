@@ -4,7 +4,8 @@
 #'
 #' @title Sources
 #'
-#' @description Sources of aquaculture and capture production, defined by FAO (2023).
+#' @description
+#' Sources of aquaculture and capture production, defined by FAO (2023).
 #'
 #' @usage
 #' source
