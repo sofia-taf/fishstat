@@ -7,6 +7,7 @@ Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@
              person("Nicole", "Tursich", role="aut"),
              person("FAO", role="cph"))
 Depends: R (>= 3.5.0)
+Suggests: areaplot
 LazyData: yes
 Description: The Food and Agriculture Organization of the United Nations (FAO)
   FishStat database is the leading source of global fishery and aquaculture
