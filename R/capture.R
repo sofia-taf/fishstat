@@ -56,7 +56,7 @@
 #' x$value <- round(x$value)
 #' head(x[order(-x$value),], 10)
 #'
-#' # Total capture production by major group since 1950, in million tonnes
+#' # Total capture production by major taxa since 1950, in million tonnes
 #' x <- aggregate(value~tolower(major), cap.t, function(x) round(sum(x/1e6)))
 #' x[x$value > 0,]
 #'

@@ -57,7 +57,7 @@
 #' x$value <- round(x$value)
 #' head(x[order(-x$value),], 10)
 #'
-#' # Total aquaculture production by major group since 1950, in million tonnes
+#' # Total aquaculture production by major taxa since 1950, in million tonnes
 #' aggregate(value~tolower(major), aqua.sp, function(x) round(sum(x/1e6)))
 #'
 #' # Annual aquaculture production of all animals
