@@ -4,9 +4,10 @@ fishstat
 The Food and Agriculture Organization of the United Nations (FAO)
 [FishStat](https://www.fao.org/fishery/en/fishstat) database is the leading
 source of global fishery and aquaculture statistics and provides unique
-information for sector analysis and monitoring. This package provides the global
-production data from all fisheries and aquaculture in R format, ready for
-analysis.
+information for sector analysis and monitoring.
+
+This package provides the global production data from all fisheries and
+aquaculture in R format, ready for analysis.
 
 Installation
 ------------
