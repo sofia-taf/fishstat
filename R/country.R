@@ -55,7 +55,7 @@
 #' country.nz <- country[country$country %in% nonzero,]
 #' country$country_name[!(country$country %in% nonzero)]
 #'
-#' # Only 'country' and 'country_name' are guaranteed to be defined
+#' # Only 'country' and 'country_name' are always defined
 #' cbind(sapply(country, function(x) all(x!="")))
 #'
 #' # Plus 'ecoclass' and 'official' for non-zero production
@@ -64,7 +64,8 @@
 #' # Economic class levels
 #' sort(unique(country$ecoclass))
 #'
-#' # Examine one country
+#' # Examine individual countries
+#' print.simple.list(country[country$iso2 == "IS",])
 #' print.simple.list(country[country$country_name == "Palau",])
 
 NA
