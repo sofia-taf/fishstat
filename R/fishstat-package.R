@@ -1,0 +1,123 @@
+#' @docType package
+#'
+#' @name fishstat-package
+#'
+#' @aliases fishstat
+#'
+#' @title Global Fishery and Aquaculture Statistics
+#'
+#' @description
+#' The Food and Agriculture Organization of the United Nations (FAO)
+#' \href{https://www.fao.org/fishery/en/fishstat}{FishStat} database is the
+#' leading source of global fishery and aquaculture statistics and provides
+#' unique information for sector analysis and monitoring.
+#'
+#' This package provides the global production data from all fisheries and
+#' aquaculture in R format, ready for analysis.
+#'
+#' @details
+#' \emph{Production tables:}
+#' \tabular{ll}{
+#'   \code{\link{aquaculture}} \tab aquaculture production\cr
+#'   \code{\link{capture}}     \tab capture production\cr
+#'   \code{\link{production}}  \tab aquaculture and capture production
+#' }
+#' \emph{Lookup tables:}
+#' \tabular{ll}{
+#'   \code{\link{area}}        \tab fishing areas\cr
+#'   \code{\link{country}}     \tab countries and territories\cr
+#'   \code{\link{environment}} \tab aquaculture environments\cr
+#'   \code{\link{measure}}     \tab units of measurement\cr
+#'   \code{\link{source}}      \tab sources of production\cr
+#'   \code{\link{species}}     \tab taxonomic groups\cr
+#'   \code{\link{status}}      \tab status of data entries
+#' }
+#'
+#' @note
+#' The data in the package were downloaded from the FAO
+#' \href{https://www.fao.org/fishery/static/Data/}{data server} and imported
+#' into R. The R package version indicates the version of FishStat data it
+#' includes. Table column names have been simplified to facilitate quick
+#' exploration and plotting in R.
+#'
+#' Any production table can be joined with any lookup table using the
+#' \code{\link{merge}} function, as demonstrated in the help page examples for
+#' each table. The column names in the R package have been designed to allow
+#' automatic inference of which columns to join, and the resulting table will
+#' have unique column names.
+#'
+#' By selecting columns of interest before joining, both from the production
+#' table and lookup tables, a merged table can have a small memory footprint.
+#' However, for the sake of convenience, one can also construct a full table
+#' with all data records and all columns. The resulting table will have many
+#' rows and columns, but most computers will handle these without
+#' problems.\preformatted{
+#' prod.all <- merge(merge(merge(merge(merge(merge(production,
+#'                   area), country), measure), source), species), status)
+#' cap.all <- merge(merge(merge(merge(merge(capture,
+#'                  area), country), measure), species), status)
+#' aqua.all <- merge(merge(merge(merge(merge(merge(aquaculture,
+#'                   area), country), environment), measure), species), status)}
+#'
+#' An effort has been made to describe each table in the corresponding R help
+#' page. However, the official and authoritative documentation of the FishStat
+#' database is found on the FAO
+#' \href{https://www.fao.org/fishery/en/fishstat}{FishStat} website.
+#'
+#' The example below demonstrates how the FishStat data can be used to produce
+#' an overview of global fisheries and aquaculture. The combination of FishStat
+#' and the R environment can also be very efficient for analyses that focus on
+#' selected areas, countries, species, and/or taxonomic groups.
+#'
+#' @author
+#' Arni Magnusson, Rishi Sharma, and Nicole Tursich created this R package.
+#'
+#' All credit for the FishStat database goes to the Statistics Team of the FAO
+#' Fisheries and Aquaculture Division, as well as national data submitters.
+#'
+#' The database
+#' \href{https://www.fao.org/contact-us/terms/db-terms-of-use/en}{terms of use}
+#' are based on the
+#' \href{https://creativecommons.org/licenses/by-nc-sa/3.0/igo/}{CC BY-NC-SA 3.0
+#' IGO} license. The R package is released under a similar
+#' \href{https://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA 4.0}
+#' license.
+#'
+#' \emph{To cite the use of FishStat data:}
+#'
+#' FAO. [Year].
+#' FishStat data.
+#' Fisheries and Aquaculture Division. Rome.
+#' \url{https://www.fao.org/fishery/en/fishstat}.
+#'
+#' \emph{To cite the use of this R package to browse and analyze the data:}
+#'
+#' Magnusson, A., R. Sharma, and N. Tursich. [Year].
+#' fishstat: Global Fishery and Aquaculture Statistics.
+#' R package version [Version].
+#' \url{https://github.com/sofia-taf/fishstat}.
+#'
+#' @examples
+#' head(production)
+#'
+#' # Analyze production measured in tonnes
+#' prod.t <- production[production$measure == "Q_tlw",]
+#'
+#' # Exclude mammals, reptiles, amphibians, and plants
+#' prod.t <- merge(prod.t, species[c("species", "major")])
+#' taxa <- c("CRUSTACEA", "INVERTEBRATA AQUATICA", "MOLLUSCA", "PISCES")
+#' prod.t <- prod.t[prod.t$major %in% taxa,]
+#'
+#' # Determine origin
+#' prod.t <- merge(prod.t, area[c("area", "inlandmarine")])
+#' prod.t$origin <- ifelse(prod.t$source == "CAPTURE", "Capture", "Aquaculture")
+#' prod.t$w <- ifelse(prod.t$inlandmarine == "Marine areas", "marine", "inland")
+#' prod.t$origin <- paste0(prod.t$origin, " (", prod.t$w, ")")
+#'
+#' # World capture fisheries and aquaculture production
+#' x <- xtabs(value~year+origin, aggregate(value~year+origin, prod.t, sum))
+#' x <- x[,c(2,1,4,3)] / 1e6
+#' library(areaplot)
+#' areaplot(x, legend=TRUE, args.legend=list(x="topleft"), ylab="million tonnes")
+
+NA
