@@ -41,11 +41,10 @@ head(production)
 
 # Analyze production measured in tonnes
 prod.t <- production[production$measure == "Q_tlw" & production$value > 0,]
-
-# Exclude mammals, reptiles, amphibians, and plants
 prod.t <- merge(prod.t, species[c("species", "major")])
-taxa <- c("CRUSTACEA", "INVERTEBRATA AQUATICA", "MOLLUSCA", "PISCES")
-prod.t <- prod.t[prod.t$major \%in\% taxa,]
+
+# Select SOFIA species, excluding mammals, reptiles, and plants
+prod.t <- prod.t[prod.t$yearbook == "Fish, crustaceans and molluscs, etc.",]
 
 # Determine origin
 prod.t <- merge(prod.t, area[c("area", "inlandmarine")])
