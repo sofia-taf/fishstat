@@ -51,7 +51,7 @@
 #'
 #' # Analyze production measured in tonnes
 #' prod.t <- production[production$measure == "Q_tlw" & production$value > 0,]
-#' prod.t <- merge(prod.t, species[c("species", "major")])
+#' prod.t <- merge(prod.t, species[c("species", "yearbook")])
 #'
 #' # Select SOFIA species, excluding mammals, reptiles, and plants
 #' prod.t <- prod.t[prod.t$yearbook == "Fish, crustaceans and molluscs, etc.",]
