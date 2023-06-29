@@ -38,7 +38,7 @@ FishStat \emph{Species Groups} data table. Column names have been simplified
 to facilitate quick exploration and plotting in R.
 }
 \examples{
-head(species)
+head(species, 3)
 
 # 3524 'species' entries have non-zero production, 9893 have no production
 nonzero <- unique(production$species[production$value > 0])
@@ -65,6 +65,13 @@ cbind(sapply(species.nz, function(x) length(unique(x))))
 # 'scientific' and 'species_name' entries are not unique
 table(species.nz$scientific)[table(species.nz$scientific) > 1]
 table(species.nz$species_name)[table(species.nz$species_name) > 1]
+
+# A closer look at the yearbook categories
+cbind(table(species.nz$yearbook))  # now inspect the 149 "other" species
+other <- species.nz[species.nz$yearbook == "Other aq. animals & products",]
+cbind(table(other$major))  # majority is mammals, what about the rest
+other <- other[other$major != "MAMMALIA",]
+cbind(table(other$isscaap))  # reptiles and inedible ornamental animals
 
 # Examine one species
 print.simple.list(species[species$species_name == "Atlantic cod",])
