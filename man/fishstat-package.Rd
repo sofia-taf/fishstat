@@ -45,12 +45,13 @@ each table. The column names in the R package have been designed to allow
 automatic inference of which columns to join, and the resulting table will
 have unique column names.
 
-By selecting columns of interest before joining, both from the production
-table and lookup tables, a merged table can have a small memory footprint.
-However, for the sake of convenience, one can also construct a full table
+To achieve a small memory footprint and fast computations, one can filter or
+aggregate rows and select columns of interest before joining tables, as
+demonstrated in the \code{capture} and \code{production} examples. On the
+other hand, for the sake of convenience, one can also construct a full table
 with all data records and all columns. The resulting table will have many
 rows and columns, but most computers will handle these without
-problems.\preformatted{
+problems:\preformatted{
 prod.all <- merge(merge(merge(merge(merge(merge(production,
                   area), country), measure), source), species), status)
 cap.all <- merge(merge(merge(merge(merge(capture,
@@ -72,7 +73,7 @@ selected areas, countries, species, and/or taxonomic groups.
 head(production)
 
 # Analyze production measured in tonnes
-prod.t <- production[production$measure == "Q_tlw",]
+prod.t <- production[production$measure == "Q_tlw" & production$value > 0,]
 
 # Exclude mammals, reptiles, amphibians, and plants
 prod.t <- merge(prod.t, species[c("species", "major")])
