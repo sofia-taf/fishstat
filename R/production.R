@@ -50,7 +50,7 @@
 #' head(production)
 #'
 #' # Analyze production measured in tonnes
-#' prod.t <- production[production$measure == "Q_tlw",]
+#' prod.t <- production[production$measure == "Q_tlw" & production$value > 0,]
 #'
 #' # Exclude mammals, reptiles, amphibians, and plants
 #' prod.t <- merge(prod.t, species[c("species", "major")])
