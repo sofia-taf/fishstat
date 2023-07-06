@@ -59,6 +59,13 @@ cap.all <- merge(merge(merge(merge(merge(capture,
 aqua.all <- merge(merge(merge(merge(merge(merge(aquaculture,
                   area), country), environment), measure), species), status)}
 
+When aggregating data, simple utility functions can be handy for tasks like
+rounding the sum of thousands/millions of tonnes:\preformatted{
+sum3 <- function(x, digits=0) round(sum(x)/1e3, digits=digits)
+sum6 <- function(x, digits=0) round(sum(x)/1e6, digits=digits)
+aggregate(value~environment, aquaculture, sum6)
+aggregate(value~area, capture, sum6, subset=measure=="Q_tlw", digits=1)}
+
 An effort has been made to describe each table in the corresponding R help
 page. However, the official and authoritative documentation of the FishStat
 database is found on the FAO
@@ -95,9 +102,8 @@ areaplot(x, legend=TRUE, args.legend=list(x="topleft"), ylab="million tonnes")
 Arni Magnusson, Rishi Sharma, and Nicole Tursich created this R package.
 
 All credit for the FishStat database goes to the Statistics Team of the FAO
-Fisheries and Aquaculture Division, as well as national data submitters.
-
-The database
+Fisheries and Aquaculture Division, as well as national data submitters. The
+database
 \href{https://www.fao.org/contact-us/terms/db-terms-of-use/en}{terms of use}
 are based on the
 \href{https://creativecommons.org/licenses/by-nc-sa/3.0/igo/}{CC BY-NC-SA 3.0
