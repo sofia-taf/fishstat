@@ -49,20 +49,20 @@
 #' head(capture)
 #'
 #' # Analyze catches measured in tonnes
-#' cap.t <- aggregate(value~species+year, capture, sum, subset=measure=="Q_tlw")
-#' cap.t <- merge(cap.t, species[c("species", "species_name", "major")])
+#' cap <- aggregate(value~species+year, capture, sum, subset=measure=="Q_tlw")
+#' cap <- merge(cap, species[c("species", "species_name", "major")])
 #'
 #' # Top 10 capture species in 2021
-#' x <- aggregate(value~species_name, cap.t, sum, subset=year==2021)
+#' x <- aggregate(value~species_name, cap, sum, subset=year==2021)
 #' x$value <- round(x$value)
 #' head(x[order(-x$value),], 10)
 #'
 #' # Total capture production by major taxa since 1950, in million tonnes
-#' x <- aggregate(value~tolower(major), cap.t, function(x) round(sum(x/1e6)))
+#' x <- aggregate(value~tolower(major), cap, function(x) round(sum(x/1e6)))
 #' x[x$value > 0,]
 #'
 #' # Annual capture production of all aquatic animals
-#' x <- aggregate(value~year, cap.t, sum)
+#' x <- aggregate(value~year, cap, sum)
 #' plot(value/1e6~year, x, ylim=c(0,105), ylab="million tonnes", type="l")
 #' title(main="Capture production: All")
 

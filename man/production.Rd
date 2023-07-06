@@ -40,20 +40,20 @@ simplified to facilitate quick exploration and plotting in R.
 head(production)
 
 # Analyze production measured in tonnes
-prod.t <- production[production$measure == "Q_tlw" & production$value > 0,]
-prod.t <- merge(prod.t, species[c("species", "yearbook")])
+prod <- production[production$measure == "Q_tlw" & production$value > 0,]
+prod <- merge(prod, species[c("species", "yearbook")])
 
 # Select SOFIA species, excluding mammals, reptiles, and plants
-prod.t <- prod.t[prod.t$yearbook == "Fish, crustaceans and molluscs, etc.",]
+prod <- prod[prod$yearbook == "Fish, crustaceans and molluscs, etc.",]
 
 # Determine origin
-prod.t <- merge(prod.t, area[c("area", "inlandmarine")])
-prod.t$origin <- ifelse(prod.t$source == "CAPTURE", "Capture", "Aquaculture")
-prod.t$w <- ifelse(prod.t$inlandmarine == "Marine areas", "marine", "inland")
-prod.t$origin <- paste0(prod.t$origin, " (", prod.t$w, ")")
+prod <- merge(prod, area[c("area", "inlandmarine")])
+prod$origin <- ifelse(prod$source == "CAPTURE", "Capture", "Aquaculture")
+prod$w <- ifelse(prod$inlandmarine == "Marine areas", "marine", "inland")
+prod$origin <- paste0(prod$origin, " (", prod$w, ")")
 
 # World capture fisheries and aquaculture production
-x <- xtabs(value~year+origin, aggregate(value~year+origin, prod.t, sum))
+x <- xtabs(value~year+origin, aggregate(value~year+origin, prod, sum))
 x <- x[,c(2,1,4,3)] / 1e6
 library(areaplot)
 areaplot(x, legend=TRUE, args.legend=list(x="topleft"), ylab="million tonnes")

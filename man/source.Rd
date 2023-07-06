@@ -33,11 +33,11 @@ to facilitate quick exploration and plotting in R.
 source
 
 # Analyze production measured in tonnes
-prod.t <- production[production$measure == "Q_tlw" & production$value > 0,]
-prod.t <- merge(prod.t, source)
+prod <- production[production$measure == "Q_tlw" & production$value > 0,]
+prod <- merge(prod, source)
 
 # Production by source in 2021, in million tonnes
-x <- aggregate(value~source_name, prod.t, sum, subset=year==2021)
+x <- aggregate(value~source_name, prod, sum, subset=year==2021)
 transform(x, value=round(value/1e6))
 }
 \seealso{
