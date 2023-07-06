@@ -36,14 +36,14 @@ aquaculture in R format, ready for analysis.
 The data in the package were downloaded from the FAO
 \href{https://www.fao.org/fishery/static/Data/}{data server} and imported
 into R. The R package version indicates the version of FishStat data it
-includes. Table column names have been simplified to facilitate quick
-exploration and plotting in R.
+includes. Column names have been simplified to facilitate quick exploration
+and plotting in R.
 
-Any production table can be joined with any lookup table using the
+Production tables can be joined with lookup tables using the
 \code{\link{merge}} function, as demonstrated in the help page examples for
-each table. The column names in the R package have been designed to allow
-automatic inference of which columns to join, and the resulting table will
-have unique column names.
+production tables. The column names in the R package have been designed to
+allow automatic inference of which columns to join, and the resulting table
+will have unique column names.
 
 To achieve a small memory footprint and fast computations, one can filter or
 aggregate rows and select columns of interest before joining tables, as
