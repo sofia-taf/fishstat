@@ -4,7 +4,6 @@ Date: 2023-06-22
 Title: Global Fishery and Aquaculture Statistics
 Authors@R: c(person("Arni", "Magnusson", role=c("aut","cre"), email="thisisarni@gmail.com"),
              person("Rishi", "Sharma", role="aut"),
-             person("Nicole", "Tursich", role="aut"),
              person("FAO", role="cph"))
 Depends: R (>= 3.5.0)
 Suggests: areaplot

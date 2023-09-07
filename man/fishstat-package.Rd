@@ -99,7 +99,7 @@ library(areaplot)
 areaplot(x, legend=TRUE, args.legend=list(x="topleft"), ylab="million tonnes")
 }
 \author{
-Arni Magnusson, Rishi Sharma, and Nicole Tursich created this R package.
+Arni Magnusson and Rishi Sharma created this R package.
 
 All credit for the FishStat database goes to the Statistics Team of the FAO
 Fisheries and Aquaculture Division, as well as national data submitters. The
@@ -120,7 +120,7 @@ Fisheries and Aquaculture Division. Rome.
 
 \emph{To cite the use of this R package to browse and analyze the data:}
 
-Magnusson, A., R. Sharma, and N. Tursich. [Year].
+Magnusson, A. and R. Sharma. [Year].
 fishstat: Global Fishery and Aquaculture Statistics.
 R package version [Version].
 \url{https://github.com/sofia-taf/fishstat}.
