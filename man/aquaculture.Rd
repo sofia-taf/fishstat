@@ -40,18 +40,18 @@ simplified to facilitate quick exploration and plotting in R.
 head(aquaculture)
 
 # Add species columns
-aqua.sp <- merge(aquaculture, species)
+aqua <- merge(aquaculture, species)
 
 # Top 10 aquaculture species in 2021
-x <- aggregate(value~species_name, aqua.sp, sum, subset=year==2021)
+x <- aggregate(value~species_name, aqua, sum, subset=year==2021)
 x$value <- round(x$value)
 head(x[order(-x$value),], 10)
 
 # Total aquaculture production by major taxa since 1950, in million tonnes
-aggregate(value~tolower(major), aqua.sp, function(x) round(sum(x/1e6)))
+aggregate(value~tolower(major), aqua, function(x) round(sum(x/1e6)))
 
 # Annual aquaculture production of all animals
-x <- aggregate(value~year, aqua.sp, sum, subset=yearbook != "Aquatic plants")
+x <- aggregate(value~year, aqua, sum, subset=yearbook != "Aquatic plants")
 plot(value/1e6~year, x, ylim=c(0,105), ylab="million tonnes", type="l")
 title(main="Aquaculture production: All animals")
 }
