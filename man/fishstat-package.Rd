@@ -126,10 +126,11 @@ FishStat data.
 Fisheries and Aquaculture Division. Rome.
 \url{https://www.fao.org/fishery/en/fishstat}.
 
-\emph{To cite the use of this R package to browse and analyze the data:}
+\emph{To cite the use of this R package to access the data, cite FishStat
+(above) as well as:}
 
 Magnusson, A. and R. Sharma. [Year].
 fishstat: Global Fishery and Aquaculture Statistics.
 R package version [Version].
-\url{https://github.com/sofia-taf/fishstat}.
+\url{https://cran.r-project.org/package=fishstat}.
 }
