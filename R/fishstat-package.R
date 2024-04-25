@@ -1,5 +1,3 @@
-#' @docType package
-#'
 #' @name fishstat-package
 #'
 #' @aliases fishstat
@@ -126,4 +124,4 @@
 #' library(areaplot)
 #' areaplot(x, legend=TRUE, args.legend=list(x="topleft"), ylab="million tonnes")
 
-NA
+"_PACKAGE"

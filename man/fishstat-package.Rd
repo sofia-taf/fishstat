@@ -98,6 +98,14 @@ x <- x[,c(2,1,4,3)] / 1e6
 library(areaplot)
 areaplot(x, legend=TRUE, args.legend=list(x="topleft"), ylab="million tonnes")
 }
+\seealso{
+Useful links:
+\itemize{
+  \item \url{https://www.fao.org/fishery/en/fishstat}
+  \item \url{https://github.com/sofia-taf/fishstat}
+}
+
+}
 \author{
 Arni Magnusson and Rishi Sharma created this R package.
 
