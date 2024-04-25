@@ -61,6 +61,7 @@
 #' prod$origin <- ifelse(prod$source == "CAPTURE", "Capture", "Aquaculture")
 #' prod$w <- ifelse(prod$inlandmarine == "Marine areas", "marine", "inland")
 #' prod$origin <- paste0(prod$origin, " (", prod$w, ")")
+#' cbind(sort(unique(prod$origin)))
 #'
 #' # World capture fisheries and aquaculture production
 #' x <- xtabs(value~year+origin, aggregate(value~year+origin, prod, sum))

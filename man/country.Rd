@@ -57,7 +57,7 @@ sort(unique(country$ecoclass))
 
 # Examine individual countries
 print.simple.list(country[country$iso2 == "IS",])
-print.simple.list(country[country$country_name == "Palau",])
+print.simple.list(country[country$country_name == "Samoa",])
 }
 \seealso{
 \code{\link{aquaculture}} and \code{\link{capture}} data are also

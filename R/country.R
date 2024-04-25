@@ -66,6 +66,6 @@
 #'
 #' # Examine individual countries
 #' print.simple.list(country[country$iso2 == "IS",])
-#' print.simple.list(country[country$country_name == "Palau",])
+#' print.simple.list(country[country$country_name == "Samoa",])
 
 NA

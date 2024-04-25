@@ -52,7 +52,7 @@
 #' # Add species columns
 #' aqua <- merge(aquaculture, species)
 #'
-#' # Top 10 aquaculture species in 2022
+#' # Top 10 aquaculture species in 2022, production in tonnes
 #' x <- aggregate(value~species_name, aqua, sum, subset=year==2022)
 #' x$value <- round(x$value)
 #' head(x[order(-x$value),], 10)
