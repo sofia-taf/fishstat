@@ -12,7 +12,7 @@ Data frame containing two columns:
 }
 }
 \source{
-FAO (2023).
+FAO (2024).
 Aquaculture Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -22,7 +22,7 @@ Fisheries and Aquaculture Division. Rome.
 environment
 }
 \description{
-Aquatic environments for aquaculture, defined by FAO (2023).
+Aquatic environments for aquaculture, defined by FAO (2024).
 }
 \details{
 This data frame contains the full set of 4 data records from the FishStat

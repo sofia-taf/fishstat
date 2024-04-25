@@ -4,7 +4,7 @@
 #'
 #' @title Areas
 #'
-#' @description Major inland and marine fishing areas, defined by FAO (2023).
+#' @description Major inland and marine fishing areas, defined by FAO (2024).
 #'
 #' @usage
 #' area
@@ -27,7 +27,7 @@
 #' facilitate quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2023).
+#' FAO (2024).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'

@@ -4,7 +4,7 @@
 #'
 #' @title Species
 #'
-#' @description Aquatic species and taxonomic groups, defined by FAO (2023).
+#' @description Aquatic species and taxonomic groups, defined by FAO (2024).
 #'
 #' @usage
 #' species
@@ -30,7 +30,7 @@
 #' to facilitate quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2023).
+#' FAO (2024).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'

@@ -6,7 +6,7 @@
 #'
 #' @description
 #' Aquaculture production quantity by species, area, country, and aquatic
-#' environment for the years 1950-2021, compiled and published by FAO (2023).
+#' environment for the years 1950-2021, compiled and published by FAO (2024).
 #'
 #' @usage
 #' aquaculture
@@ -30,7 +30,7 @@
 #' simplified to facilitate quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2023).
+#' FAO (2024).
 #' Global Aquaculture Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'

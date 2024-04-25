@@ -4,7 +4,7 @@
 #'
 #' @title Measures
 #'
-#' @description Units of measurement, defined by FAO (2023).
+#' @description Units of measurement, defined by FAO (2024).
 #'
 #' @usage
 #' measure
@@ -27,7 +27,7 @@
 #' quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2023).
+#' FAO (2024).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'

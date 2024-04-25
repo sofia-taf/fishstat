@@ -18,7 +18,7 @@ Data frame containing eight columns:
 }
 }
 \source{
-FAO (2023).
+FAO (2024).
 Global Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -28,7 +28,7 @@ Fisheries and Aquaculture Division. Rome.
 country
 }
 \description{
-Countries and various territories, defined by FAO (2023).
+Countries and various territories, defined by FAO (2024).
 }
 \details{
 This data frame contains the full set of 275 data records from the FishStat

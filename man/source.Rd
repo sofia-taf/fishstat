@@ -12,7 +12,7 @@ Data frame containing two columns:
 }
 }
 \source{
-FAO (2023).
+FAO (2024).
 Global Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -22,7 +22,7 @@ Fisheries and Aquaculture Division. Rome.
 source
 }
 \description{
-Sources of aquaculture and capture production, defined by FAO (2023).
+Sources of aquaculture and capture production, defined by FAO (2024).
 }
 \details{
 This data frame contains the full set of 5 data records from the FishStat

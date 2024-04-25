@@ -5,7 +5,7 @@
 #' @title Sources
 #'
 #' @description
-#' Sources of aquaculture and capture production, defined by FAO (2023).
+#' Sources of aquaculture and capture production, defined by FAO (2024).
 #'
 #' @usage
 #' source
@@ -23,7 +23,7 @@
 #' to facilitate quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2023).
+#' FAO (2024).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'
