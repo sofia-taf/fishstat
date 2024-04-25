@@ -28,10 +28,10 @@ capture
 }
 \description{
 Capture production quantity by species, area, and country for the years
-1950-2021, compiled and published by FAO (2024).
+1950-2022, compiled and published by FAO (2024).
 }
 \details{
-This data frame contains the full set of 1,030,435 data records from the
+This data frame contains the full set of 1,050,119 data records from the
 FishStat \emph{Capture Quantity} data table. Column names have been
 simplified to facilitate quick exploration and plotting in R.
 }
@@ -42,8 +42,8 @@ head(capture)
 cap <- aggregate(value~species+year, capture, sum, subset=measure=="Q_tlw")
 cap <- merge(cap, species[c("species", "species_name", "major")])
 
-# Top 10 capture species in 2021
-x <- aggregate(value~species_name, cap, sum, subset=year==2021)
+# Top 10 capture species in 2022
+x <- aggregate(value~species_name, cap, sum, subset=year==2022)
 x$value <- round(x$value)
 head(x[order(-x$value),], 10)
 

@@ -18,7 +18,7 @@
 #' }
 #'
 #' @details
-#' This data frame contains the full set of 5 data records from the FishStat
+#' This data frame contains the full set of 4 data records from the FishStat
 #' \emph{Production Source} data table. Column names have been simplified
 #' to facilitate quick exploration and plotting in R.
 #'
@@ -46,8 +46,8 @@
 #' prod <- production[production$measure == "Q_tlw" & production$value > 0,]
 #' prod <- merge(prod, source)
 #'
-#' # Production by source in 2021, in million tonnes
-#' x <- aggregate(value~source_name, prod, sum, subset=year==2021)
+#' # Production by source in 2022, in million tonnes
+#' x <- aggregate(value~source_name, prod, sum, subset=year==2022)
 #' transform(x, value=round(value/1e6))
 
 NA

@@ -27,7 +27,7 @@ status
 Status of data entries, defined by FAO (2024).
 }
 \details{
-This data frame contains the full set of 7 data records from the FishStat
+This data frame contains the full set of 16 data records from the FishStat
 \emph{Symbols} data table. Column names have been simplified to facilitate
 quick exploration and plotting in R.
 }

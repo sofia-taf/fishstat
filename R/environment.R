@@ -41,9 +41,9 @@
 #' @examples
 #' environment
 #'
-#' # Aquaculture production by environment in 2021, in million tonnes
+#' # Aquaculture production by environment in 2022, in million tonnes
 #' x <- merge(aquaculture, environment)
-#' x <- aggregate(value~environment_name, x, sum, subset=year==2021)
+#' x <- aggregate(value~environment_name, x, sum, subset=year==2022)
 #' transform(x, value=round(value/1e6))
 
 NA

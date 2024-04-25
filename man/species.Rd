@@ -33,7 +33,7 @@ species
 Aquatic species and taxonomic groups, defined by FAO (2024).
 }
 \details{
-This data frame contains the full set of 13,417 data records from the
+This data frame contains the full set of 13,615 data records from the
 FishStat \emph{Species Groups} data table. Column names have been simplified
 to facilitate quick exploration and plotting in R.
 }

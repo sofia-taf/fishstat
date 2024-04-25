@@ -46,7 +46,7 @@ table(capture$measure)
 # When number of individuals is used, it is for mammals and reptiles
 x <- merge(capture[capture$measure=="Q_no_1",], species)
 aggregate(value~isscaap, x, sum)
-aggregate(value~isscaap, x, sum, subset=year==2021)
+aggregate(value~isscaap, x, sum, subset=year==2022)
 
 # Examine one measure
 print.simple.list(measure[measure$measure=="Q_tlw",])
