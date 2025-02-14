@@ -69,8 +69,8 @@ admin_import <- function(zipfile, type, format=TRUE)
                      production="Global_production_quantity.csv",
                      source="CL_FI_PRODUCTION_SOURCE_DET.csv",
                      species="CL_FI_SPECIES_GROUPS.csv",
-                     status="CL_FI_SYMBOL.csv",
-                     symbol="CL_FI_SYMBOL.csv",
+                     status="CL_FI_SYMBOL_SDMX.csv",
+                     symbol="CL_FI_SYMBOL_SDMX.csv",
                      unit="FSJ_UNIT.csv")
 
   # Read and format table

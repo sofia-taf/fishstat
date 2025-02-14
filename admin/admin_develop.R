@@ -1,8 +1,8 @@
 source("R/admin_import.R")
 source("R/admin_format.R")
-zipfile <- "data-raw/Aquaculture_2023.1.1.zip"
-zipfile <- "data-raw/Capture_2023.1.1.zip"
-zipfile <- "data-raw/GlobalProduction_2023.1.1.zip"
+zipfile <- "data-raw/Aquaculture_2024.1.0.zip"
+zipfile <- "data-raw/Capture_2024.1.0.zip"
+zipfile <- "data-raw/GlobalProduction_2024.1.0.zip"
 
 csv <- unzip(zipfile, list=TRUE)
 csv <- cbind(sort(csv$Name[file_ext(csv$Name) == "csv"]))

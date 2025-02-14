@@ -4,9 +4,9 @@ library(tools)  # resaveRdaFiles
 
 dir.create("data", showWarnings=FALSE)
 
-zip_aqua <- "data-raw/Aquaculture_2023.1.1.zip"
-zip_capt <- "data-raw/Capture_2023.1.1.zip"
-zip_prod <- "data-raw/GlobalProduction_2023.1.1.zip"
+zip_aqua <- "data-raw/Aquaculture_2024.1.0.zip"
+zip_capt <- "data-raw/Capture_2024.1.0.zip"
+zip_prod <- "data-raw/GlobalProduction_2024.1.0.zip"
 csv <- unzip(zip_aqua, list=TRUE)
 csv <- unzip(zip_capt, list=TRUE)
 csv <- unzip(zip_prod, list=TRUE)
