@@ -23,20 +23,18 @@
 #'
 #' @return Data frame containing FishStat data.
 #'
-#' @note This function follows the FishStat database schema from 2021 onwards.
+#' @note This function follows the FishStat database schema from 2024 onwards.
 #'
 #' @seealso
 #' \code{\link{admin_import}} imports a data table from a \verb{.zip} file.
 #'
-#' \code{\link{fishstat-package}} gives an overview of the package.
-#'
 #' @examples
 #' \dontrun{
 #' # Import and format, one combined step
-#' capture <- admin_import("Capture_2023.1.1.zip", "capture")
+#' capture <- admin_import("Capture_2024.1.0.zip", "capture")
 #'
 #' # Import and format, two separate steps
-#' capture <- admin_import("Capture_2023.1.1.zip", "capture", format=FALSE)
+#' capture <- admin_import("Capture_2024.1.0.zip", "capture", format=FALSE)
 #' capture <- admin_format(capture, "capture")
 #' }
 #'
