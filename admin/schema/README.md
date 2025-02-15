@@ -132,6 +132,53 @@ UNIT         -> MEASURE
 SYMBOL       -> STATUS
 ```
 
+Eight columns were renamed in `GLOBAL_PRODUCTION_QUANTITY.csv`:
+
+```
+SPECIES  -> SPECIES.ALPHA_3_CODE
+YEAR     -> PERIOD
+AREA     -> AREA.CODE
+COUNTRY  -> COUNTRY.UN_CODE
+QUANTITY -> VALUE
+UNIT     -> MEASURE
+SYMBOL   -> STATUS
+SOURCE   -> PRODUCTION_SOURCE_DET.CODE
+```
+
+Eighteen columns were added to `CL_FI_WATERAREA_GROUPS.csv`,
+
+```
+Name_Ar
+Name_Cn
+Name_Ru
+InlandMarine_Group_Ar
+InlandMarine_Group_Cn
+InlandMarine_Group_Es
+InlandMarine_Group_Fr
+InlandMarine_Group_Ru
+FARegion_Group_Ar
+FARegion_Group_Cn
+FARegion_Group_Es
+FARegion_Group_Fr
+FARegion_Group_Ru
+Ocean_Group_Ar
+Ocean_Group_Cn
+Ocean_Group_Es
+Ocean_Group_Fr
+Ocean_Group_Ru
+```
+
+and six columns were renamed:
+
+```
+FARegion_Group     -> FARegion_Group_En
+InlandMarine_Group -> InlandMarine_Group_En
+Name_en            -> Name_En
+Name_es            -> Name_Es
+Name_fr            -> Name_Fr
+Ocean_Group        -> Ocean_Group_En
+```
+
 Fifteen columns were added to `CL_FI_COUNTRY_GROUPS.csv`,
 
 ```
@@ -158,6 +205,21 @@ and three columns were renamed:
 Continent_Group -> Continent_Group_En
 EcoClass_Group  -> EcoClass_Group_En
 GeoRegion_Group -> GeoRegion_Group_En
+```
+
+Ten columns were added to `FSJ_UNIT.csv`:
+
+```
+Name_Ar
+Name_Cn
+Name_Ru
+Multiplier
+Unit
+Description_En
+Description_Es
+Description_Fr
+SWS_Unit
+Identifier
 ```
 
 One column was added to `CL_FI_PRODUCTION_SOURCE_DET.csv`:
@@ -226,66 +288,4 @@ and three columns were renamed:
 Description -> Description_En
 Code        -> Identifier
 Name        -> Name_En
-```
-
-Eighteen columns were added to `CL_FI_WATERAREA_GROUPS.csv`,
-
-```
-Name_Ar
-Name_Cn
-Name_Ru
-InlandMarine_Group_Ar
-InlandMarine_Group_Cn
-InlandMarine_Group_Es
-InlandMarine_Group_Fr
-InlandMarine_Group_Ru
-FARegion_Group_Ar
-FARegion_Group_Cn
-FARegion_Group_Es
-FARegion_Group_Fr
-FARegion_Group_Ru
-Ocean_Group_Ar
-Ocean_Group_Cn
-Ocean_Group_Es
-Ocean_Group_Fr
-Ocean_Group_Ru
-```
-
-and six columns were renamed:
-
-```
-FARegion_Group     -> FARegion_Group_En
-InlandMarine_Group -> InlandMarine_Group_En
-Name_en            -> Name_En
-Name_es            -> Name_Es
-Name_fr            -> Name_Fr
-Ocean_Group        -> Ocean_Group_En
-```
-
-Ten columns were added to `FSJ_UNIT.csv`:
-
-```
-Name_Ar
-Name_Cn
-Name_Ru
-Multiplier
-Unit
-Description_En
-Description_Es
-Description_Fr
-SWS_Unit
-Identifier
-```
-
-Eight columns were renamed in `GLOBAL_PRODUCTION_QUANTITY.csv`:
-
-```
-SPECIES  -> SPECIES.ALPHA_3_CODE
-YEAR     -> PERIOD
-AREA     -> AREA.CODE
-COUNTRY  -> COUNTRY.UN_CODE
-QUANTITY -> VALUE
-UNIT     -> MEASURE
-SYMBOL   -> STATUS
-SOURCE   -> PRODUCTION_SOURCE_DET.CODE
 ```
