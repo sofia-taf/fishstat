@@ -26,7 +26,9 @@
 #' @note This function follows the FishStat database schema from 2024 onwards.
 #'
 #' @seealso
-#' \code{\link{admin_import}} imports a data table from a \verb{.zip} file.
+#' \code{\link{admin_format}} formats a data table.
+#'
+#' \code{\link{admin_schema}} analyzes the database schema for a given release.
 #'
 #' @examples
 #' \dontrun{
