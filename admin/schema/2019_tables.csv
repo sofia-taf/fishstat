@@ -1,0 +1,11 @@
+zip,csv,nrow,ncol
+Aquaculture_2019.1.0.zip,CL_FI_COUNTRY_GROUPS.csv,274,19
+Aquaculture_2019.1.0.zip,CL_FI_ENVIRONMENT.csv,4,5
+Aquaculture_2019.1.0.zip,CL_FI_SPECIES_GROUPS.csv,12751,18
+Aquaculture_2019.1.0.zip,CL_FI_SYMBOL.csv,6,4
+Aquaculture_2019.1.0.zip,CL_FI_UNIT.csv,7,4
+Aquaculture_2019.1.0.zip,CL_FI_WATERAREA_GROUPS.csv,29,7
+Aquaculture_2019.1.0.zip,TS_FI_AQUACULTURE.csv,91821,10
+Capture_2019.1.0.zip,TS_FI_CAPTURE.csv,956589,7
+GlobalProduction_2019.1.0.zip,CL_FI_PRODUCTION_SOURCE.csv,5,5
+GlobalProduction_2019.1.0.zip,TS_FI_PRODUCTION.csv,1048410,8
