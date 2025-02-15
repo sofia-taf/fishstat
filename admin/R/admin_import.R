@@ -58,6 +58,10 @@ admin_import <- function(zipfile, type, format=TRUE)
     stop("'type' must be one of the following:",
          paste0("\n    ", type.help, collapse=""))
 
+  # In 2024, CL_FI_SYMBOL.csv changed to CL_FI_SYMBOL_SDMX.csv
+  symbol.csv <- grep("CL_FI_SYMBOL.csv|CL_FI_SYMBOL_SDMX.csv",
+                     unzip(zipfile, list=TRUE)$Name, value=TRUE)
+
   # Select filename
   filename <- switch(type,
                      aquaculture="Aquaculture_Quantity.csv",
@@ -69,8 +73,8 @@ admin_import <- function(zipfile, type, format=TRUE)
                      production="Global_production_quantity.csv",
                      source="CL_FI_PRODUCTION_SOURCE_DET.csv",
                      species="CL_FI_SPECIES_GROUPS.csv",
-                     status="CL_FI_SYMBOL_SDMX.csv",
-                     symbol="CL_FI_SYMBOL_SDMX.csv",
+                     status=symbol.csv,
+                     symbol=symbol.csv,
                      unit="FSJ_UNIT.csv")
 
   # Read and format table

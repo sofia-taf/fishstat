@@ -1,12 +1,17 @@
+release <- "2021.1.2"
+release <- "2022.1.1"
+release <- "2023.1.1"
+release <- "2024.1.0"
+
 source("R/admin_import.R")
 source("R/admin_format.R")
 library(tools)  # resaveRdaFiles
 
 dir.create("data", showWarnings=FALSE)
 
-zip_aqua <- "data-raw/Aquaculture_2024.1.0.zip"
-zip_capt <- "data-raw/Capture_2024.1.0.zip"
-zip_prod <- "data-raw/GlobalProduction_2024.1.0.zip"
+zip_aqua <- paste0("data-raw/Aquaculture_", release, ".zip")
+zip_capt <- paste0("data-raw/Capture_", release, ".zip")
+zip_prod <- paste0("data-raw/GlobalProduction_", release, ".zip")
 csv <- unzip(zip_aqua, list=TRUE)
 csv <- unzip(zip_capt, list=TRUE)
 csv <- unzip(zip_prod, list=TRUE)
