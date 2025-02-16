@@ -58,9 +58,10 @@ admin_import <- function(zipfile, type, format=TRUE)
     stop("'type' must be one of the following:",
          paste0("\n    ", type.help, collapse=""))
 
-  # In 2024, CL_FI_SYMBOL.csv changed to CL_FI_SYMBOL_SDMX.csv
-  symbol.csv <- grep("CL_FI_SYMBOL.csv|CL_FI_SYMBOL_SDMX.csv",
-                     unzip(zipfile, list=TRUE)$Name, value=TRUE)
+  # Match filenames that change between years
+  csv <- unzip(zipfile, list=TRUE)$Name
+  # in 2024, CL_FI_SYMBOL.csv changed to CL_FI_SYMBOL_SDMX.csv
+  symbol.csv <- csv[csv %in% c("CL_FI_SYMBOL.csv", "CL_FI_SYMBOL_SDMX.csv")]
 
   # Select filename
   filename <- switch(type,
@@ -76,6 +77,7 @@ admin_import <- function(zipfile, type, format=TRUE)
                      status=symbol.csv,
                      symbol=symbol.csv,
                      unit="FSJ_UNIT.csv")
+  filename <- csv[tolower(csv) == tolower(filename)]  # ignore case
 
   # Read and format table
   x <- read.csv(unz(zipfile, filename), na.strings=NULL, encoding="UTF-8")
