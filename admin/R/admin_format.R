@@ -21,6 +21,8 @@
 #' @return Data frame containing FishStat data.
 #'
 #' @note
+#' This function follows the FishStat database schema from 2021 onwards.
+#'
 #' This function does not modify data entries, with one exception:
 #'
 #' If \code{type = "status"}, then this function changes the data entry
@@ -55,6 +57,12 @@ admin_format <- function(x, type)
   if(missing(type) || !(type %in% type.choices))
     stop("'type' must be one of the following:",
          paste0("\n  ", type.help, collapse=""))
+
+  # Create 'Short_Name' column in measure table if it doesn't exist
+  if((type == "measure" || type == "unit") && !any(names(x) == "Short_Name"))
+    x$Short_Name <- c("Tonnes", "USD (1000)", "Number", "Effort (hrs)",
+                      "Quantity (kg)", "Length (m)", "Number (1000)",
+                      "Quantity (kW)", "TLW", "TPW", "Local Currency")
 
   # Rename columns
   names(x) <- tolower(names(x))

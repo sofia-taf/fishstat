@@ -23,7 +23,7 @@
 #'
 #' @return Data frame containing FishStat data.
 #'
-#' @note This function follows the FishStat database schema from 2024 onwards.
+#' @note This function follows the FishStat database schema from 2021 onwards.
 #'
 #' @seealso
 #' \code{\link{admin_format}} formats a data table.
