@@ -11,6 +11,8 @@
 #' @seealso
 #' \code{\link{admin_import}} imports a data table from a \verb{.zip} file.
 #'
+#' \code{\link{admin_summary}} analyzes package contents.
+#'
 #' @examples
 #' \dontrun{
 #' schema <- admin_schema("2024.1.0")

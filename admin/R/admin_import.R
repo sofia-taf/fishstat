@@ -26,9 +26,11 @@
 #' @note This function follows the FishStat database schema from 2021 onwards.
 #'
 #' @seealso
+#' \code{\link{admin_schema}} analyzes the database schema for a given release.
+#'
 #' \code{\link{admin_format}} formats a data table.
 #'
-#' \code{\link{admin_schema}} analyzes the database schema for a given release.
+#' \code{\link{admin_summary}} analyzes package contents.
 #'
 #' @examples
 #' \dontrun{
