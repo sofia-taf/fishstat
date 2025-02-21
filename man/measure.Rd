@@ -5,7 +5,7 @@
 \alias{measure}
 \title{Measures}
 \format{
-Data frame containing two columns:
+Data frame containing seven columns:
 \tabular{ll}{
   \code{measure}             \tab measure code\cr
   \code{measure_name}        \tab measure name\cr
