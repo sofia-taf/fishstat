@@ -40,8 +40,6 @@ admin_schema <- function(release)
   {
     if(!file.exists(zip))
       zip <- file.path("data-raw", zip)
-    if(!file.exists(zip))
-      zip <- file.path("../data-raw", zip)
     x <- read.csv(unz(zip, csv), na.strings=NULL, encoding="UTF-8")
     setNames(dim(x), c("nrow", "ncol"))
   }
@@ -50,8 +48,6 @@ admin_schema <- function(release)
   {
     if(!file.exists(zip))
       zip <- file.path("data-raw", zip)
-    if(!file.exists(zip))
-      zip <- file.path("../data-raw", zip)
     x <- read.csv(unz(zip, csv), na.strings=NULL, encoding="UTF-8", nrows=1)
     names(x)
   }
