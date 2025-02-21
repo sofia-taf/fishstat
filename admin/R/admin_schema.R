@@ -63,7 +63,7 @@ admin_schema <- function(release)
   tables <- data.frame(tables, t(dims))
 
   cols <- mapply(csv_colnames, tables$zip, tables$csv, USE.NAMES=FALSE)
-  columns <- data.frame(csv=rep(tables$csv, tables$ncol), col=unlist(cols))
+  columns <- data.frame(csv=rep(tables$csv, tables$ncol), column=unlist(cols))
 
   list(tables=tables, columns=columns)
 }
