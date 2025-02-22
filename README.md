@@ -1,3 +1,7 @@
+[![CRAN Status](https://r-pkg.org/badges/version/fishstat)](https://cran.r-project.org/package=fishstat)
+[![CRAN Monthly](https://cranlogs.r-pkg.org/badges/fishstat)](https://cran.r-project.org/package=fishstat)
+[![CRAN Total](https://cranlogs.r-pkg.org/badges/grand-total/fishstat)](https://cran.r-project.org/package=fishstat)
+
 fishstat
 ========
 
@@ -12,11 +16,12 @@ aquaculture in R format, ready for analysis.
 Installation
 ------------
 
-The package can be installed from GitHub using the `install_github` command:
+The package can be installed from
+[CRAN](https://cran.r-project.org/package=fishstat) using the `install.packages`
+command:
 
 ```R
-library(remotes)
-install_github("sofia-taf/fishstat")
+install.packages("fishstat")
 ```
 
 Usage
@@ -44,3 +49,10 @@ The fishstat package is developed openly on
 
 Feel free to open an [issue](https://github.com/sofia-taf/fishstat/issues) there
 if you encounter problems or have suggestions for future versions.
+
+The current development version can be installed using:
+
+```R
+library(remotes)
+install_github("sofia-taf/fishstat")
+```
