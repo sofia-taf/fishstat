@@ -35,11 +35,11 @@ quick exploration and plotting in R.
 head(status, 3)
 
 # Aquaculture data entries
-# 80\% have official status, 17\% are estimated, and 3\% are negligible
+# Percentage that have official status, estimated, and negligible
 100 * proportions(table(aquaculture$status))
 
 # Capture data entries
-# 94\% have official status, 3\% are estimated, and 3\% are negligible
+# Precentage that have official status, estimated, and negligible
 100 * proportions(table(capture$status))
 
 # Examine one status definition

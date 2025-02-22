@@ -49,26 +49,26 @@
 #' @examples
 #' head(species, 3)
 #'
-#' # 3524 'species' entries have non-zero production, 9893 have no production
+#' # Number of 'species' entries that have non-zero production
 #' nonzero <- unique(production$species[production$value > 0])
 #' species.nz <- species[species$species %in% nonzero,]
 #' length(unique(species.nz$species))
 #'
 #' # Only 'species', 'scientific', 'major', and 'taxonomic' are always defined
-#' cbind(sapply(species, function(x) all(x!="")))
+#' cbind(sapply(species, function(x) all(x != "")))
 #'
 #' # Plus 'isscaap' and 'yearbook' for non-zero production
-#' cbind(sapply(species.nz, function(x) all(x!="")))
+#' cbind(sapply(species.nz, function(x) all(x != "")))
 #'
 #' # A variety of species are missing 'species_name', 'cpc_class', 'cpc_group'
 #' cbind(table(species.nz$major[species.nz$species_name == ""]))
 #' cbind(table(species.nz$major[species.nz$cpc_class == ""]))
 #' cbind(table(species.nz$major[species.nz$cpc_group == ""]))
 #'
-#' # 3524 non-zero production species by major taxa
+#' # Number of 'species' entries that have non-zero production by major taxa
 #' cbind(table(species.nz$major))
 #'
-#' # 3524 species in 7 major taxa, 50 isscaap groups, and 3 yearbook categories
+#' # 7 major taxa, 50 isscaap groups, and 3 yearbook categories
 #' cbind(sapply(species.nz, function(x) length(unique(x))))
 #'
 #' # 'scientific' and 'species_name' entries are not unique
@@ -76,7 +76,7 @@
 #' table(species.nz$species_name)[table(species.nz$species_name) > 1]
 #'
 #' # A closer look at the yearbook categories
-#' cbind(table(species.nz$yearbook))  # now inspect the 149 "other" species
+#' cbind(table(species.nz$yearbook))  # now inspect the "other" species
 #' other <- species.nz[species.nz$yearbook == "Other aq. animals & products",]
 #' cbind(table(other$major))  # majority is mammals, what about the rest
 #' other <- other[other$major != "MAMMALIA",]
