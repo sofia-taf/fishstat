@@ -43,7 +43,7 @@ head(species, 3)
 # Select 'species' entries that have non-zero production
 nonzero <- unique(production$species[production$value > 0])
 species.nz <- species[species$species \%in\% nonzero,]
-length(unique(species.nz$species))
+length(species.nz$species)
 
 # Only 'species', 'scientific', 'major', and 'taxonomic' are always defined
 cbind(sapply(species, function(x) all(x != "")))
