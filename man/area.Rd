@@ -37,12 +37,15 @@ facilitate quick exploration and plotting in R.
 \examples{
 head(area)
 
-# 28 'area' entries have non-zero production, 1 has no production
-nonzero <- unique(production$area[production$value > 0])
-area.nz <- area[area$area \%in\% nonzero,]
-area$area_name[!(area$area \%in\% nonzero)]  # Antarctica - Inland waters
+# Inland waters and marine areas
+area[area$inlandmarine == "Inland waters", c("area", "area_name")]
+area[area$inlandmarine == "Marine areas", c("area", "area_name")]
 
-# Areas 98 and 99 are only used for whale catches
+# Check if any area has zero production
+nonzero <- unique(production$area[production$value > 0])
+print(area[!(area$area \%in\% nonzero),], row.names=FALSE)
+
+# Check which species groups are recorded in areas 98 and 99
 species_98_99 <- unique(production$species[production$area \%in\% 98:99])
 cbind(unique(species$isscaap[species$species \%in\% species_98_99]))
 
@@ -50,10 +53,6 @@ cbind(unique(species$isscaap[species$species \%in\% species_98_99]))
 area$area[area$faregion == "Northern regions"]
 area$area[area$faregion == "Central regions"]
 area$area[area$faregion == "Southern regions"]
-
-# Inland waters and marine areas
-area[area$inlandmarine == "Inland waters", c("area", "area_name")]
-area[area$inlandmarine == "Marine areas", c("area", "area_name")]
 
 # Examine one area
 print.simple.list(area[area$area == 71,])
