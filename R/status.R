@@ -48,7 +48,7 @@
 #' 100 * proportions(table(aquaculture$status))
 #'
 #' # Capture data entries
-#' # Precentage that have official status, estimated, and negligible
+#' # Percentage that have official status, estimated, and negligible
 #' 100 * proportions(table(capture$status))
 #'
 #' # Examine one status definition
