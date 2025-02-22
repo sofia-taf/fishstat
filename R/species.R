@@ -49,7 +49,7 @@
 #' @examples
 #' head(species, 3)
 #'
-#' # Number of 'species' entries that have non-zero production
+#' # Select 'species' entries that have non-zero production
 #' nonzero <- unique(production$species[production$value > 0])
 #' species.nz <- species[species$species %in% nonzero,]
 #' length(unique(species.nz$species))
