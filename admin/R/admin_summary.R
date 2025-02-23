@@ -1,6 +1,6 @@
 #' Admin Summary
 #'
-#' Analyze \code{fishstat} package contents.
+#' Produce a summary of \code{fishstat} package contents.
 #'
 #' @param pkg a package name, e.g. \code{"fishstat21"}.
 #'
@@ -23,18 +23,21 @@
 
 admin_summary <- function(pkg)
 {
+  # Load package and fetch tables
   library(pkg, character=TRUE)
   envir <- as.environment(paste0("package:", pkg))
-  tabs <- sapply(ls(envir), get, envir=envir)
+  x <- sapply(ls(envir), get, envir=envir)
 
-  tables <- data.frame(table=names(tabs), nrow=sapply(tabs, nrow),
-                       ncol=sapply(tabs, ncol), row.names=NULL)
+  # Summarize tables
+  tables <- data.frame(table=names(x), nrow=sapply(x, nrow),
+                       ncol=sapply(x, ncol), row.names=NULL)
 
-  columns <- data.frame(table=rep(names(tabs), sapply(tabs, length)),
-                        column=unlist(sapply(tabs, names)),
-                        min=rapply(tabs, min), max=rapply(tabs, max),
-                        row.names=NULL)
+  # Summarize columns
+  columns <- data.frame(table=rep(tables$table, tables$ncol),
+                        column=unlist(sapply(x, names)), min=rapply(x, min),
+                        max=rapply(x, max), row.names=NULL)
 
+  # Truncate text width
   columns$min[nchar(columns$min) > 11] <-
     paste0(substring(columns$min[nchar(columns$min) > 11], 1, 8), "...")
   columns$max[nchar(columns$max) > 11] <-
