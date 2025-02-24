@@ -7,7 +7,6 @@
 One row was removed from the `source` table:
 
 ```
-source
 AQUACULTURE
 ```
 
@@ -41,7 +40,6 @@ The example on the `status` help page uses the `N` category.
 The `ecoclass` categories in the `country` table changed from
 
 ```
-ecoclass
 Developed countries or areas
 Least Developed Countries
 Other developing countries or areas
