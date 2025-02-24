@@ -4,6 +4,8 @@ mkdir("plot")
 
 plot_production <- function(pkg)
 {
+  year <- paste0("20", substring(pkg, 9))
+  message(year)
   library(pkg, character=TRUE)
   pngfile <- paste0(pkg, ".png")
   taf.png(file.path("plot", pngfile))
@@ -12,7 +14,6 @@ plot_production <- function(pkg)
   detach(paste0("package:", pkg), character=TRUE)
   cmd <- paste0("optipng -quiet plot/", pngfile)
   system(cmd)
-  message(pngfile)
 }
 
 plot_production("fishstat21")
