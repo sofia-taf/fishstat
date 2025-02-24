@@ -1,0 +1,62 @@
+"table","column","min","max","unique","nrow"
+"aquaculture","species","AAA","ZHB",652,98767
+"aquaculture","year","1950","2020",71,98767
+"aquaculture","area","1","87",22,98767
+"aquaculture","country","4","894",213,98767
+"aquaculture","value","0","11164633.48",20924,98767
+"aquaculture","measure","Q_tlw","Q_tlw",1,98767
+"aquaculture","status","","N",3,98767
+"aquaculture","environment","BW","MA",3,98767
+"area","area","1","99",29,29
+"area","area_name","Africa -...","Pacific,...",29,29
+"area","inlandmarine","Inland w...","Marine a...",2,29
+"area","faregion","","Southern...",4,29
+"area","ocean","","Southern...",5,29
+"capture","species","AAB","ZYP",2981,1028720
+"capture","year","1950","2020",71,1028720
+"capture","area","1","99",28,1028720
+"capture","country","4","896",247,1028720
+"capture","value","0","12277000",64979,1028720
+"capture","measure","Q_no_1","Q_tlw",2,1028720
+"capture","status","","N",3,1028720
+"country","country","0","896",275,275
+"country","country_name","Afghanistan","Zimbabwe",274,275
+"country","iso2","","ZW",258,275
+"country","iso3","","ZWE",260,275
+"country","continent","","Oceania",6,275
+"country","georegion","","Western ...",23,275
+"country","ecoclass","","Upper-mi...",6,275
+"country","official","","Zanzibar",268,275
+"environment","environment","AL","MA",4,4
+"environment","environment_name","All envi...","Marine",4,4
+"measure","measure","E_h_1","V_USD_1000",11,11
+"measure","measure_name","Effort (...","Value (U...",11,11
+"measure","short","Effort (...","USD (1000)",11,11
+"measure","multiplier","1","1000",2,11
+"measure","unit","h","USD",8,11
+"measure","measure_description","","Observed...",7,11
+"measure","sws","","FI_004",5,11
+"production","species","AAA","ZYP",3175,1127487
+"production","year","1950","2020",71,1127487
+"production","area","1","99",28,1127487
+"production","country","4","896",247,1127487
+"production","value","0","12277000",75405,1127487
+"production","measure","Q_no_1","Q_tlw",2,1127487
+"production","status","","N",3,1127487
+"production","source","BRACKISH...","MARINE",4,1127487
+"source","source","AQUACULTURE","MARINE",5,5
+"source","source_name","Aquacult...","Capture ...",5,5
+"species","species","AAA","ZZE",13069,13069
+"species","species_name","","Zugmayer...",9758,13069
+"species","scientific","Aaptosya...","Zygochla...",13055,13069
+"species","isscaap","","Turtles",51,13069
+"species","major","AMPHIBIA...","PLANTAE ...",7,13069
+"species","cpc_class","","Tunas, s...",30,13069
+"species","cpc_group","","Other aq...",6,13069
+"species","yearbook","","Fish, cr...",3,13069
+"species","author","","zur Stra...",5371,13069
+"species","taxonomic","1020100101","799XXXXX...",13069,13069
+"status","status","","T",7,7
+"status","status_name","ESTIMATE","ZERO",7,7
+"status","status_description","Data cre...","Official...",7,7
+"status","alternate","","0",5,7
