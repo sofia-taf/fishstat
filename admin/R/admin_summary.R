@@ -35,7 +35,9 @@ admin_summary <- function(pkg)
   # Summarize columns
   columns <- data.frame(table=rep(tables$table, tables$ncol),
                         column=unlist(sapply(x, names)), min=rapply(x, min),
-                        max=rapply(x, max), row.names=NULL)
+                        max=rapply(x, max),
+                        unique=rapply(x, function(x) length(unique(x))),
+                        nrow=rapply(x, length), row.names=NULL)
 
   # Truncate text width
   columns$min[nchar(columns$min) > 11] <-
