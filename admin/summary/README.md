@@ -10,8 +10,8 @@ One row was removed from the `source` table:
 AQUACULTURE
 ```
 
-This source type was obsolete, as all aquaculture production is `BRACKISHWATER`,
-`FRESHWATER`, or `MARINE`.
+This source type was obsolete, as all aquaculture production is of `source` type
+`BRACKISHWATER`, `FRESHWATER`, or `MARINE`.
 
 **status**
 
@@ -31,7 +31,7 @@ but in 2024 these changed to
 ```
 
 where the three categories describe official, estimated, and negligible values.
-The example on the `status` help page uses the `N` category.
+The example on the help page for the `status` table uses the `N` category.
 
 ## fishstat22
 
