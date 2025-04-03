@@ -1,0 +1,65 @@
+---
+title:  Examples in Base R
+author: Arni Magnusson and Rishi Sharma
+format:
+  html:
+    toc: true
+vignette: >
+  %\VignetteIndexEntry{Examples in base R}
+  %\VignetteEngine{quarto::html}
+  %\VignetteEncoding{UTF-8}
+---
+
+## aquaculture
+
+```{r}
+#| include: false
+
+library(fishstat)
+```
+
+```{r}
+head(aquaculture)
+
+# Add species columns
+aqua <- merge(aquaculture, species)
+
+# Top 10 aquaculture species in 2022, production in tonnes
+x <- aggregate(value~species_name, aqua, sum, subset=year==2022)
+x$value <- round(x$value)
+head(x[order(-x$value),], 10)
+
+# Total aquaculture production by major taxa since 1950, in million tonnes
+aggregate(value~tolower(major), aqua, function(x) round(sum(x/1e6)))
+
+# Annual aquaculture production of all animals
+x <- aggregate(value~year, aqua, sum, subset=yearbook != "Aquatic plants")
+plot(value/1e6~year, x, ylim=c(0,105), ylab="million tonnes", type="l")
+title(main="Aquaculture production: All animals")
+```
+
+## area
+
+```{r}
+head(area)
+
+# Inland waters and marine areas
+area[area$inlandmarine == "Inland waters", c("area", "area_name")]
+area[area$inlandmarine == "Marine areas", c("area", "area_name")]
+
+# Check if any area has zero production
+nonzero <- unique(production$area[production$value > 0])
+print(area[!(area$area %in% nonzero),], row.names=FALSE)
+
+# Check which species groups are recorded in areas 98 and 99
+species_98_99 <- unique(production$species[production$area %in% 98:99])
+cbind(unique(species$isscaap[species$species %in% species_98_99]))
+
+# Marine fishing areas in northern, central, and southern regions
+area$area[area$faregion == "Northern regions"]
+area$area[area$faregion == "Central regions"]
+area$area[area$faregion == "Southern regions"]
+
+# Examine one area
+print.simple.list(area[area$area == 71,])
+```
