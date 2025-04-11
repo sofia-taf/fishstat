@@ -2,6 +2,7 @@ release <- "2021.1.2"
 release <- "2022.1.1"
 release <- "2023.1.1"
 release <- "2024.1.0"
+release <- "2025.1.0"
 
 source("R/admin_import.R")
 source("R/admin_format.R")
