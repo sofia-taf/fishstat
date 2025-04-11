@@ -1,5 +1,15 @@
 # Comparison of Database Schemas
 
+## 2025 Changes
+
+**Tables**
+
+No tables were added, removed, or renamed.
+
+**Columns**
+
+No columns were added, removed, or renamed.
+
 ## 2024 Changes
 
 **Tables**
