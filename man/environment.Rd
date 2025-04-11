@@ -12,7 +12,7 @@ Data frame containing two columns:
 }
 }
 \source{
-FAO (2024).
+FAO (2025).
 Aquaculture Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -22,7 +22,7 @@ Fisheries and Aquaculture Division. Rome.
 environment
 }
 \description{
-Aquatic environments for aquaculture, defined by FAO (2024).
+Aquatic environments for aquaculture, defined by FAO (2025).
 }
 \details{
 This data frame contains the full set of 4 data records from the FishStat
@@ -32,9 +32,9 @@ to facilitate quick exploration and plotting in R.
 \examples{
 environment
 
-# Aquaculture production by environment in 2022, in million tonnes
+# Aquaculture production by environment in 2023, in million tonnes
 x <- merge(aquaculture, environment)
-x <- aggregate(value~environment_name, x, sum, subset=year==2022)
+x <- aggregate(value~environment_name, x, sum, subset=year==2023)
 transform(x, value=round(value/1e6))
 }
 \seealso{
