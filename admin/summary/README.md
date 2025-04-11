@@ -1,5 +1,23 @@
 # Comparison of fishstat Packages
 
+## fishstat25
+
+**status**
+
+In 2024, the categories used for production data entries were
+
+```
+  A   I   N
+92%  5%  3%
+```
+
+but in 2025 these changed to
+
+```
+  A   E   I
+92%  0%  8%
+```
+
 ## fishstat24
 
 **source**
