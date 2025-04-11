@@ -84,7 +84,8 @@ prod <- production[production$measure == "Q_tlw" & production$value > 0,]
 prod <- merge(prod, species[c("species", "yearbook")])
 
 # Select SOFIA species, excluding mammals, reptiles, and plants
-prod <- prod[prod$yearbook == "Fish, crustaceans and molluscs, etc.",]
+prod <- prod[prod$yearbook ==
+             "Aquatic animals (Fish, crustaceans and molluscs, etc.)",]
 
 # Determine origin
 prod <- merge(prod, area[c("area", "inlandmarine")])
