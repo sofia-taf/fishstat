@@ -2,6 +2,24 @@
 
 ## fishstat25
 
+**species**
+
+In 2024, the yearbook categories were
+
+```
+Aquatic plants                          2%
+Fish, crustaceans and molluscs, etc.   93%
+Other aq. animals & products            3%
+```
+
+but in 2025 these changed to
+
+```
+Algae (Aquatic plants)                                    3%
+Aquatic animals (Fish, crustaceans and molluscs, etc.)   93%
+Other aquatic animals & products                          3%
+```
+
 **status**
 
 In 2024, the categories used for production data entries were
@@ -50,6 +68,25 @@ but in 2024 these changed to
 
 where the three categories describe official, estimated, and negligible values.
 The example on the help page for the `status` table uses the `N` category.
+
+## fishstat23
+
+**species**
+
+In 2022, the yearbook categories were
+
+```
+All aquatic organisms                   5%
+Fish, crustaceans and molluscs, etc.   94%
+```
+
+but in 2023 these changed to
+
+```
+Aquatic plants                          2%
+Fish, crustaceans and molluscs, etc.   93%
+Other aq. animals & products            3%
+```
 
 ## fishstat22
 
