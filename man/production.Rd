@@ -32,7 +32,7 @@ Aquaculture and capture production quantity by species, area, and country for
 the years 1950-2024, compiled and published by FAO (2026).
 }
 \details{
-This data frame contains the full set of 1,159,613 data records from the
+This data frame contains the full set of 1,159,616 data records from the
 FishStat \emph{Production Quantity} data table. Column names have been
 simplified to facilitate quick exploration and plotting in R.
 }

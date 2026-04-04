@@ -24,7 +24,7 @@
 #' }
 #'
 #' @details
-#' This data frame contains the full set of 1,055,015 data records from the
+#' This data frame contains the full set of 1,052,197 data records from the
 #' FishStat \emph{Capture Quantity} data table. Column names have been
 #' simplified to facilitate quick exploration and plotting in R.
 #'
