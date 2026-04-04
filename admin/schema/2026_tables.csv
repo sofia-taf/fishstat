@@ -1,0 +1,12 @@
+zip,csv,nrow,ncol
+Aquaculture_2026.1.0.zip,Aquaculture_Quantity.csv,107419,8
+Aquaculture_2026.1.0.zip,Aquaculture_Value.csv,86354,8
+Aquaculture_2026.1.0.zip,CL_FI_COUNTRY_GROUPS.csv,275,34
+Aquaculture_2026.1.0.zip,CL_FI_PRODENVIRONMENT.csv,4,5
+Aquaculture_2026.1.0.zip,CL_FI_SPECIES_GROUPS.csv,13772,36
+Aquaculture_2026.1.0.zip,CL_FI_SYMBOL_SDMX.csv,16,7
+Aquaculture_2026.1.0.zip,CL_FI_WATERAREA_GROUPS.csv,29,25
+Aquaculture_2026.1.0.zip,FSJ_UNIT.csv,11,12
+Capture_2026.1.0.zip,Capture_Quantity.csv,1052197,7
+GlobalProduction_2026.1.0.zip,CL_FI_PRODUCTION_SOURCE_DET.csv,4,6
+GlobalProduction_2026.1.0.zip,Global_production_quantity.csv,1159616,8
