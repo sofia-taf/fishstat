@@ -1,3 +1,10 @@
+# fishstat 2026.1.0.0 (2026-04-04)
+
+* Incorporated FAO FishStat 2026.1.0 data release.
+
+
+
+
 # fishstat 2025.1.0.1 (2025-06-17)
 
 * Improved help pages in terms of content, speed, and consistency of results
