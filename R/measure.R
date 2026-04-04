@@ -4,7 +4,7 @@
 #'
 #' @title Measures
 #'
-#' @description Units of measurement, defined by FAO (2025).
+#' @description Units of measurement, defined by FAO (2026).
 #'
 #' @usage
 #' measure
@@ -27,7 +27,7 @@
 #' quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2025).
+#' FAO (2026).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'
@@ -55,7 +55,7 @@
 #' # When number of individuals is used, it is for mammals and reptiles
 #' x <- merge(capture[capture$measure=="Q_no_1",], species)
 #' aggregate(value~isscaap, x, sum)
-#' aggregate(value~isscaap, x, sum, subset=year==2023)
+#' aggregate(value~isscaap, x, sum, subset=year==2024)
 #'
 #' # Examine one measure
 #' print.simple.list(measure[measure$measure=="Q_tlw",])

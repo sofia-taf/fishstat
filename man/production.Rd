@@ -18,7 +18,7 @@ Data frame containing eight columns:
 }
 }
 \source{
-FAO (2025).
+FAO (2026).
 Global Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -29,7 +29,7 @@ production
 }
 \description{
 Aquaculture and capture production quantity by species, area, and country for
-the years 1950-2023, compiled and published by FAO (2025).
+the years 1950-2024, compiled and published by FAO (2026).
 }
 \details{
 This data frame contains the full set of 1,159,613 data records from the

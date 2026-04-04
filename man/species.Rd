@@ -20,7 +20,7 @@ Data frame containing ten columns:
 }
 }
 \source{
-FAO (2025).
+FAO (2026).
 Global Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -30,7 +30,7 @@ Fisheries and Aquaculture Division. Rome.
 species
 }
 \description{
-Aquatic species and taxonomic groups, defined by FAO (2025).
+Aquatic species and taxonomic groups, defined by FAO (2026).
 }
 \details{
 This data frame contains the full set of 13,596 data records from the

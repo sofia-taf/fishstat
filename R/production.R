@@ -6,7 +6,7 @@
 #'
 #' @description
 #' Aquaculture and capture production quantity by species, area, and country for
-#' the years 1950-2023, compiled and published by FAO (2025).
+#' the years 1950-2024, compiled and published by FAO (2026).
 #'
 #' @usage
 #' production
@@ -30,7 +30,7 @@
 #' simplified to facilitate quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2025).
+#' FAO (2026).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'

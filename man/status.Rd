@@ -14,7 +14,7 @@ Data frame containing four columns:
 }
 }
 \source{
-FAO (2025).
+FAO (2026).
 Global Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -24,7 +24,7 @@ Fisheries and Aquaculture Division. Rome.
 status
 }
 \description{
-Status of data entries, defined by FAO (2025).
+Status of data entries, defined by FAO (2026).
 }
 \details{
 This data frame contains the full set of 16 data records from the FishStat

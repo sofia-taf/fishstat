@@ -12,7 +12,7 @@ Data frame containing two columns:
 }
 }
 \source{
-FAO (2025).
+FAO (2026).
 Global Production.
 Fisheries and Aquaculture Division. Rome.
 
@@ -22,7 +22,7 @@ Fisheries and Aquaculture Division. Rome.
 source
 }
 \description{
-Sources of aquaculture and capture production, defined by FAO (2025).
+Sources of aquaculture and capture production, defined by FAO (2026).
 }
 \details{
 This data frame contains the full set of 4 data records from the FishStat
@@ -36,8 +36,8 @@ source
 prod <- production[production$measure == "Q_tlw" & production$value > 0,]
 prod <- merge(prod, source)
 
-# Production by source in 2023, in million tonnes
-x <- aggregate(value~source_name, prod, sum, subset=year==2023)
+# Production by source in 2024, in million tonnes
+x <- aggregate(value~source_name, prod, sum, subset=year==2024)
 transform(x, value=round(value/1e6))
 }
 \seealso{

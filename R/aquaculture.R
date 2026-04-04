@@ -6,7 +6,7 @@
 #'
 #' @description
 #' Aquaculture production quantity by species, area, country, and aquatic
-#' environment for the years 1950-2023, compiled and published by FAO (2025).
+#' environment for the years 1950-2024, compiled and published by FAO (2026).
 #'
 #' @usage
 #' aquaculture
@@ -30,7 +30,7 @@
 #' simplified to facilitate quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2025).
+#' FAO (2026).
 #' Global Aquaculture Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'
@@ -52,8 +52,8 @@
 #' # Add species columns
 #' aqua <- merge(aquaculture, species)
 #'
-#' # Top 10 aquaculture species in 2023, production in tonnes
-#' x <- aggregate(value~species_name, aqua, sum, subset=year==2023)
+#' # Top 10 aquaculture species in 2024, production in tonnes
+#' x <- aggregate(value~species_name, aqua, sum, subset=year==2024)
 #' x$value <- round(x$value)
 #' head(x[order(-x$value),], 10)
 #'

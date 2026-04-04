@@ -4,7 +4,7 @@
 #'
 #' @title Countries
 #'
-#' @description Countries and various territories, defined by FAO (2025).
+#' @description Countries and various territories, defined by FAO (2026).
 #'
 #' @usage
 #' country
@@ -28,7 +28,7 @@
 #' facilitate quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2025).
+#' FAO (2026).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'

@@ -4,7 +4,7 @@
 #'
 #' @title Status
 #'
-#' @description Status of data entries, defined by FAO (2025).
+#' @description Status of data entries, defined by FAO (2026).
 #'
 #' @usage
 #' status
@@ -24,7 +24,7 @@
 #' quick exploration and plotting in R.
 #'
 #' @source
-#' FAO (2025).
+#' FAO (2026).
 #' Global Production.
 #' Fisheries and Aquaculture Division. Rome.
 #'
