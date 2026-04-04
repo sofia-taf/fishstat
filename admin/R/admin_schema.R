@@ -59,9 +59,13 @@ admin_schema <- function(release)
     csv=unname(unlist(csv)))
   dims <- mapply(csv_dim, tables$zip, tables$csv, USE.NAMES=FALSE)
   tables <- data.frame(tables, t(dims))
+  tables <- tables[order(tables$zip, tables$csv),]
+  row.names(tables) <- NULL
 
   cols <- mapply(csv_colnames, tables$zip, tables$csv, USE.NAMES=FALSE)
   columns <- data.frame(csv=rep(tables$csv, tables$ncol), column=unlist(cols))
+  columns <- columns[order(columns$csv, columns$column),]
+  row.names(columns) <- NULL
 
   list(tables=tables, columns=columns)
 }
