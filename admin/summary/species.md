@@ -1,6 +1,6 @@
 # Changes in the Species Table
 
-## yearbook
+## The yearbook column
 
 Capture production 1950-2000 (million tonnes)
 
